@@ -1,0 +1,151 @@
+/* parallax.css */
+@import url("meyer_reset.css");
+@import url("normalize_extract.css");
+@import url("typo.css");
+/* COLORS
+color: #ff383f;  RED
+background-color: rgba(239,239,239, 0.8);  GREY
+background-color: rgba(255,56,63, 0.85); RED
+background-color: rgba(202,235,242, 0.75); LIGHT BLUE
+
+
+*/
+
+
+body, html{
+  height: 100%;
+}
+.nav  {
+  /* border: solid white 1px; */
+  color: rgba(255,56,63, 1);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  min-width: 100%;
+  height: 5%;
+  background-color: rgba(202,235,242, 0.75);
+  padding: 1% 0;
+  margin: auto;
+}
+.navbar  { /* needs work  maybe a bootstrap navbar? */
+  border: solid black 1px;
+  /* width: 1000px; */
+  margin: auto;
+  padding: 0 1%;
+  text-align: right;
+}
+
+.home {
+  position: absolute;
+  z-index: 1;
+  top: 120px;
+  width: 100%;
+}
+
+.logo-container  {
+  /* border: solid red 2px; */
+  position: relative;
+  margin: 0 0 0 4%;
+  float: left;
+  width: 30%;
+  height: auto;
+}
+svg g path {
+  fill: #ff383f;
+}
+.logo  {/* image */
+  color: red;
+  fill: #ff383f;
+  float: left;
+  width: 45px;
+  height: auto;
+}
+
+.head-shot  {
+  width: 150px;
+  height: 100%;
+}
+
+.home-content { border: solid green 1px;
+  float: left;
+  width: 60%;
+  margin: 0 3% 0 0;
+  text-align: right;
+}
+
+
+
+[class*="parallax"]  {
+
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+
+  opacity: 0.5;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  height: 70%;
+  /* scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax1 {
+  /* background image */
+  background-image: url("../images/parallax1.jpg");
+
+}
+.parallax2 {
+  /* background image */
+  background-image: url("../images/parallax2.jpg");
+}
+.parallax3 {
+  /* background image */
+  background-image: url("../images/parallax3.jpg");
+}
+
+.bio, .schedule, .perform, .media, .contact{
+  min-width: 100%;
+
+  background-color: rgba(191, 20, 7, 0.5);
+  /* margin-bottom: 100px; */
+}
+
+
+.bio {
+  min-height: 300px;
+  -webkit-transform: translateZ(-1px);
+  transform: translateZ(-1px);
+}
+.schedule {
+  min-height: 300px;
+}
+.perform {
+  min-height: 300px;
+}
+
+.media {
+  min-height: 300px;
+}
+
+.contact {
+  min-height: 300px;
+}
+
+@media screen and (max-width: 1000px){
+  /* .nav  {
+    height: 4%;
+  } */
+}
+
+
+@media screen and (max-width: 760px){
+  .home-content {
+    clear: both;
+    padding: 0;
+    text-align: left;
+  }
+}
