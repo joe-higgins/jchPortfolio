@@ -13,15 +13,20 @@ background-color: rgba(202,235,242, 0.75); LIGHT BLUE
 
 
 body, html{
+  border: solid 3px blue;
   height: 100%;
+  /* min-width: 100%; */
+}
+.wrapper  {
+  /* position: absolute; */
 }
 .nav  {
-  /* border: solid white 1px; */
+  border: solid yellow 2px;
   color: rgba(255,56,63, 1);
   position: fixed;
   top: 0;
   z-index: 2;
-  min-width: 100%;
+  min-width: 100vw;
   height: 5%;
   background-color: rgba(202,235,242, 0.75);
   padding: 1% 0;
@@ -36,26 +41,27 @@ body, html{
 }
 
 .home {
+  border: solid yellow 2px;
   position: absolute;
   z-index: 1;
   top: 120px;
-  width: 100%;
+  min-width: 100%;
 }
 
 .logo-container  {
-  /* border: solid red 2px; */
+  border: solid red 2px;
   position: relative;
   margin: 0 0 0 4%;
   float: left;
-  width: 30%;
+  /* width: 30%; */
   height: auto;
 }
 svg g path {
-  fill: #ff383f;
+  /* fill: #ff383f; */
 }
 .logo  {/* image */
-  color: red;
-  fill: #ff383f;
+  /* color: red; */
+  /* fill: #ff383f; */
   float: left;
   width: 45px;
   height: auto;
@@ -66,7 +72,8 @@ svg g path {
   height: 100%;
 }
 
-.home-content { border: solid green 1px;
+.home-content {
+  border: solid green 1px;
   float: left;
   width: 60%;
   margin: 0 3% 0 0;
@@ -77,12 +84,11 @@ svg g path {
 
 [class*="parallax"]  {
 
-  height: 100vh;
+  /* height: 100vh; */
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-perspective: 1px;
   perspective: 1px;
-
   opacity: 0.5;
   filter: alpha(opacity=30); /* For IE8 and earlier */
   height: 70%;
